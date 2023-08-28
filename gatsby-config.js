@@ -28,7 +28,8 @@ module.exports = {
         policy: [
           {
             userAgent: "*",
-            allow: "/"
+            allow: "/",
+            disallow: "/cdn-cgi/"
           }
         ]
       }
