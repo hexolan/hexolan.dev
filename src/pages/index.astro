@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import wavesSvg from "../assets/waves.svg?raw";
+
+import { SendIcon, GithubIcon, LinkedinIcon } from "astro-feather";
+---
+
+<Layout>
+	<main>
+		<div class="flex flex-col space-y-8 justify-center items-center min-h-screen">
+			<div class="grid space-y-2 justify-items-center">
+				<p class="text-5xl text-neutral-400">Declan Teevan</p>
+				<p class="text-2xl text-neutral-300">Software Engineer</p>
+			</div>
+
+			<div class="flex space-x-6 justify-items-center">
+				<a
+					class="hover:text-blue-500"
+					href={"mailto:" + import.meta.env.REF_EMAIL}
+					target="_blank"
+					rel="noreferrer"
+					aria-label="Contact by email"
+				>
+					<SendIcon size={32} />
+				</a>
+				<a
+					class="hover:text-blue-500"
+					href={"https://github.com/" + import.meta.env.REF_GITHUB}
+					target="_blank"
+					rel="noreferrer"
+					aria-label="View GitHub"
+				>
+					<GithubIcon size={32} />
+				</a>
+				<a
+					class="hover:text-blue-500"
+					href={"https://www.linkedin.com/in/" + import.meta.env.REF_LINKEDIN}
+					target="_blank"
+					rel="noreferrer"
+					aria-label="View LinkedIn"
+				>
+					<LinkedinIcon size={32} />
+				</a>
+			</div>
+		</div>
+		<div class="absolute bottom-0 w-full overflow-hidden -z-10">
+			<Fragment set:html={wavesSvg} />
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,51 @@
+---
+import { faviconSvg, faviconPngs } from "../assets/icons";
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+
+const schemaMarkup = JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: title,
+	url: import.meta.env.SITE,
+});
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
+		<link rel="alternate icon" type="image/png" href={faviconPngs.get(48)} />
+
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="manifest" href="/manifest.json" />
+
+		<title>{title ? title : "Hexolan"}</title>
+		<meta name="description" content="Hexolan is a UK-based software engineer crafting digital solutions in a world increasingly fueled by technology." />
+	</head>
+	<body>
+		<slot />
+		<script is:inline type="application/ld+json" set:html={schemaMarkup} />
+	</body>
+</html>
+
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer base {
+		body {
+			@apply bg-slate-900;
+			@apply text-neutral-600;
+		}
+	}
+</style>
