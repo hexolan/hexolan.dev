@@ -1,6 +1,6 @@
 # hexolan.dev
 
-Old portfolio-display only version of [hexolan.dev](https://hexolan.dev)
+Old portfolio display-only version of [hexolan.dev](https://hexolan.dev)
 
 Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com/).
 
