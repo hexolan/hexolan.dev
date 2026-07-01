@@ -1,10 +1,12 @@
 # hexolan.dev
 
-The current version of [hexolan.dev](https://hexolan.dev) built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com/).
+Old portfolio-display only version of [hexolan.dev](https://hexolan.dev)
+
+Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## 🛠️ Development
 
-I'm using [pnpm](https://pnpm.io/) as the package manager.
+[pnpm](https://pnpm.io/) is currently used as the package manager (worked alright, now has very good integration; used to have issues before where `yarn` would be better suited for anything bundling, due to different package files).
 
 1\. Install Dependencies
 
